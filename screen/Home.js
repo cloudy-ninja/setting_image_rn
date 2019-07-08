@@ -1,15 +1,18 @@
 import React from "react";
 import { View, Text } from "react-native";
-import { ColorButton } from '../components/Home'
+import {
+  ColorButton,
+  HomeContainer,
+} from '../components/Home'
 
 export class HomeScreen extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <HomeContainer>
         <ColorButton
           title={'Choose Image'}
         />
-      </View>
+      </HomeContainer>
     );
   }
 }
