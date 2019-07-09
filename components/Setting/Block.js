@@ -9,23 +9,28 @@ import constants from '../../constants';
 import Slider from "react-native-slider";
 
 const Block =({
-  onPress,
   title,
   bgColor,
   sliderValue,
-  onSliderValueChange
+  onSliderValueChange,
+  selectedBgColor,
+  selectedTextColor,
+  onSelectBgColor,
+  onSelectTextColor,
 } = this.props) =>
   <View style={{...style.block, backgroundColor: bgColor}}>
     <View style={style.horizontalContainer}>
       <Text>BG Color:</Text>
       <ColorViewer
-        bgColor={constants.Colors.green}
+        bgColor={selectedBgColor}
+        onPress={onSelectBgColor}
       />
     </View>
     <View style={style.horizontalContainer}>
       <Text>Text Color:</Text>
       <ColorViewer
-        bgColor={constants.Colors.blueIos}
+        bgColor={selectedTextColor}
+        onPress={onSelectTextColor}
       />
     </View>
     <View style={style.horizontalContainer}>

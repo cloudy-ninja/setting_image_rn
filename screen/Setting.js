@@ -26,7 +26,9 @@ export class SettingScreen extends React.Component {
       deliveredOpacity: 0.2,
       readOpacity: 0.2,
       textOpacity: 0.2,
-      bgOpacity: 0.8
+      bgOpacity: 0.8,
+      sentBgColor: constants.Colors.green,
+      sentTextColor: constants.Colors.blueIos,
     }
   }
 
@@ -60,6 +62,18 @@ export class SettingScreen extends React.Component {
     })
   }
 
+  setSentBgColor = (color) => {
+    this.setState({
+      sentBgColor: color
+    })
+  }
+
+  setSentTextColor = (color) => {
+    this.setState({
+      sentTextColor: color
+    })
+  }
+
   render() {
     const { navigation } = this.props;
     const imageUri = navigation.getParam('imageUri');
@@ -78,6 +92,14 @@ export class SettingScreen extends React.Component {
                 bgColor={constants.Colors.orange}
                 sliderValue={this.state.sentOpacity}
                 onSliderValueChange={this.setSentOpacity}
+                selectedBgColor={this.state.sentBgColor}
+                selectedTextColor={this.state.sentTextColor}
+                onSelectBgColor={() => {this.props.navigation.push('SelectColor', {
+                  onSelectColor: this.setSentBgColor,
+                })}}
+                onSelectTextColor={() => {this.props.navigation.push('SelectColor', {
+                  onSelectColor: this.setSentTextColor,
+                })}}
               />
             </View>
             <View style={styles.horizontalContainer}>

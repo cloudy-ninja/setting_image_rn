@@ -14,7 +14,10 @@ export class SelectColor extends React.Component {
     super(props);
   }
 
-  onSelectColor = (color) => {
+  onColorSelected = (color) => {
+    const { navigation } = this.props;
+    const onSelectColor = navigation.getParam('onSelectColor');
+    onSelectColor(color)
     this.props.navigation.goBack()
   }
 
@@ -24,7 +27,7 @@ export class SelectColor extends React.Component {
         <View style={styles.colorPickerContainer}>
           <ColorPicker
             oldColor='purple'
-            onColorSelected={this.onSelectColor}
+            onColorSelected={(color) => this.onColorSelected(color)}
             style={{flex: 1}}
           />
         </View>
