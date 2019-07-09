@@ -120,6 +120,30 @@ export class SettingScreen extends React.Component {
     this.props.navigation.goBack()
   }
 
+  onSave = () => {
+    const {
+      bgOpacity,
+      sentBgColor,
+      sentTextColor,
+      sentOpacity,
+      deliveredBgColor,
+      deliveredTextColor,
+      deliveredOpacity,
+      readBgColor,
+      readTextColor,
+      readOpacity,
+      textBgColor,
+      textTextColor,
+      textOpacity,
+    } = this.state
+
+    const sentBlock = {
+      bgColor: sentBgColor,
+      textColor: sentTextColor,
+      opacity: sentOpacity
+    }
+  }
+
   render() {
     const { navigation } = this.props;
     const imageUri = navigation.getParam('imageUri');
