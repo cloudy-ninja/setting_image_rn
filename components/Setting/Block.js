@@ -18,7 +18,7 @@ const Block =({
   onSelectBgColor,
   onSelectTextColor,
 } = this.props) =>
-  <View style={{...style.block, backgroundColor: bgColor}}>
+  <View style={{...style.block, backgroundColor: selectedBgColor, opacity: sliderValue}}>
     <View style={style.horizontalContainer}>
       <Text>BG Color:</Text>
       <ColorViewer
@@ -27,7 +27,7 @@ const Block =({
       />
     </View>
     <View style={style.horizontalContainer}>
-      <Text>Text Color:</Text>
+      <Text style={{color: selectedTextColor}}>Text Color:</Text>
       <ColorViewer
         bgColor={selectedTextColor}
         onPress={onSelectTextColor}

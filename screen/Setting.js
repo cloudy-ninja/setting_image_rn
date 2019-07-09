@@ -22,18 +22,18 @@ export class SettingScreen extends React.Component {
     super(props);
 
     this.state = {
-      sentOpacity: 0.2,
-      deliveredOpacity: 0.2,
-      readOpacity: 0.2,
-      textOpacity: 0.2,
+      sentOpacity: 0.8,
+      deliveredOpacity: 0.8,
+      readOpacity: 0.8,
+      textOpacity: 0.8,
       bgOpacity: 0.8,
-      sentBgColor: constants.Colors.red,
+      sentBgColor: constants.Colors.pink,
       sentTextColor: constants.Colors.red,
-      deliveredBgColor: constants.Colors.red,
+      deliveredBgColor: constants.Colors.blueSky,
       deliveredTextColor: constants.Colors.red,
-      readBgColor: constants.Colors.red,
+      readBgColor: constants.Colors.green,
       readTextColor: constants.Colors.red,
-      textBgColor: constants.Colors.red,
+      textBgColor: constants.Colors.purple,
       textTextColor: constants.Colors.red,
     }
   }
