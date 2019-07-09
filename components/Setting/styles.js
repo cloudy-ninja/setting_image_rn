@@ -18,16 +18,27 @@ const styles = StyleSheet.create({
 		justifyContent: 'space-between',
 		alignItems: 'center',
 		paddingHorizontal: 5,
-		marginBottom: 10,
+		marginBottom: 8,
 	},
 	block: {
-		width: 200,
-		height: 100,
+		width: 240,
+		height: 110,
 		borderWidth: 1,
 		justifyContent: 'center',
 	},
 	blockTitle: {
 		fontSize: 18,
+	},
+	colorViewerContainer: {
+		padding: 2,
+		width: 50,
+		height: 25,
+		borderWidth: 0.2,
+		backgroundColor: 'white',
+	},
+	colorViewer: {
+		width: '100%',
+		height: '100%',
 	}
 })
 
