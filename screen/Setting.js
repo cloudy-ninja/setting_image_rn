@@ -7,7 +7,7 @@ import {
 import ImagePicker from 'react-native-image-picker';
 import {
   ColorButton,
-  HomeContainer,
+  Container,
 } from '../components/Home'
 import {
   styles,
@@ -23,14 +23,14 @@ export class SettingScreen extends React.Component {
     const imageUri = navigation.getParam('imageUri');
 
     return (
-      <HomeContainer>
+      <Container>
         <ImageBackground
           imageStyle={{resizeMode: 'stretch'}}
           source={{ uri: imageUri }}
           style={styles.backgroundImage}
         >
         </ImageBackground>
-      </HomeContainer>
+      </Container>
     );
   }
 }

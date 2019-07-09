@@ -1,7 +1,7 @@
 import ColorButton from './ColorButton'
-import HomeContainer from './HomeContainer'
+import Container from './Container'
 
 export {
   ColorButton,
-  HomeContainer,
+  Container,
 }

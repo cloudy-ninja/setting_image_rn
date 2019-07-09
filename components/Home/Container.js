@@ -3,7 +3,7 @@ import SafeAreaView from 'react-native-safe-area-view'
 import constants from '../../constants';
 import style from './styles'
 
-const HomeContainer = ({
+const Container = ({
   children
 } = this.props) =>
 	<SafeAreaView
@@ -12,4 +12,4 @@ const HomeContainer = ({
 		{children}
 	</SafeAreaView>
 
-export default HomeContainer
+export default Container

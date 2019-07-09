@@ -3,7 +3,7 @@ import { Alert } from 'react-native'
 import ImagePicker from 'react-native-image-picker';
 import {
   ColorButton,
-  HomeContainer,
+  Container,
 } from '../components/Home'
 
 export class HomeScreen extends React.Component {
@@ -34,12 +34,12 @@ export class HomeScreen extends React.Component {
 
   render() {
     return (
-      <HomeContainer>
+      <Container>
         <ColorButton
           title={'Choose Image'}
           onPress={this.onChooseImage}
         />
-      </HomeContainer>
+      </Container>
     );
   }
 }
