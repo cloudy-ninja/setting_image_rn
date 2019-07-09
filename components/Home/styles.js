@@ -7,7 +7,6 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 		alignItems: 'center',
 		backgroundColor: constants.Colors.white,
-		paddingHorizontal: '8%',
 	},
 	colorButton: {
 		backgroundColor: constants.Colors.blueIos,

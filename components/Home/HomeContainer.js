@@ -8,7 +8,7 @@ const HomeContainer = ({
 } = this.props) =>
 	<SafeAreaView
 		style={style.container}
-		forceInset={{ top: 'always', bottom: 'never' }}>
+		forceInset={{ top: 'always', bottom: 'always' }}>
 		{children}
 	</SafeAreaView>
 

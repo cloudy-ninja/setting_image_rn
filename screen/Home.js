@@ -25,6 +25,9 @@ export class HomeScreen extends React.Component {
       } else if (response.error) {
         Alert.alert(response.error);
       } else {
+        this.props.navigation.push('Setting', {
+          imageUri: response.uri,
+        })
       }
     });
   }
