@@ -9,13 +9,14 @@ const ColorButton =({
   onPress,
   title,
   bgColor,
+  fontColor,
 } = this.props) =>
   <TouchableOpacity
     style={!bgColor ? style.colorButton : {...style.colorButton, backgroundColor: bgColor}}
     onPress={onPress}
   >
     <Text
-      style={style.colorButtonText}
+      style={!fontColor ? style.colorButtonText : {...style.colorButtonText, color: fontColor}}
     >
       {title}
     </Text>

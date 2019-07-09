@@ -13,8 +13,8 @@ const styles = StyleSheet.create({
 		borderRadius: 3,
 		alignItems: 'center',
 		justifyContent: 'center',
-		paddingHorizontal: 25,
 		paddingVertical: 12,
+		width: 150,
 	},
 	colorButtonText: {
 		color: constants.Colors.white,
