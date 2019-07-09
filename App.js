@@ -3,6 +3,7 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 import {
   HomeScreen,
   SettingScreen,
+  SelectColor,
 } from './screen'
 
 
@@ -15,6 +16,12 @@ const RootStack = createStackNavigator ({
     },
     Setting: {
       screen: SettingScreen,
+      navigationOptions: () => ({
+        header: null,
+      }),
+    },
+    SelectColor: {
+      screen: SelectColor,
       navigationOptions: () => ({
         header: null,
       }),
