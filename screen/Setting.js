@@ -27,14 +27,14 @@ export class SettingScreen extends React.Component {
       readOpacity: 0.2,
       textOpacity: 0.2,
       bgOpacity: 0.8,
-      sentBgColor: constants.Colors.green,
-      sentTextColor: constants.Colors.blueIos,
-      deliveredBgColor: constants.Colors.green,
-      deliveredTextColor: constants.Colors.blueIos,
-      readBgColor: constants.Colors.green,
-      readTextColor: constants.Colors.blueIos,
-      textBgColor: constants.Colors.green,
-      textTextColor: constants.Colors.blueIos,
+      sentBgColor: constants.Colors.red,
+      sentTextColor: constants.Colors.red,
+      deliveredBgColor: constants.Colors.red,
+      deliveredTextColor: constants.Colors.red,
+      readBgColor: constants.Colors.red,
+      readTextColor: constants.Colors.red,
+      textBgColor: constants.Colors.red,
+      textTextColor: constants.Colors.red,
     }
   }
 
@@ -135,7 +135,7 @@ export class SettingScreen extends React.Component {
             <View style={styles.horizontalContainer}>
               <Text style={styles.blockTitle}>Sent:</Text>
               <Block
-                bgColor={constants.Colors.orange}
+                bgColor={constants.Colors.pink}
                 sliderValue={this.state.sentOpacity}
                 onSliderValueChange={this.setSentOpacity}
                 selectedBgColor={this.state.sentBgColor}
@@ -151,7 +151,7 @@ export class SettingScreen extends React.Component {
             <View style={styles.horizontalContainer}>
               <Text style={styles.blockTitle}>Delivered:</Text>
               <Block
-                bgColor={constants.Colors.orange}
+                bgColor={constants.Colors.blueSky}
                 sliderValue={this.state.deliveredOpacity}
                 onSliderValueChange={this.setDeliveredOpacity}
                 selectedBgColor={this.state.deliveredBgColor}
@@ -167,7 +167,7 @@ export class SettingScreen extends React.Component {
             <View style={styles.horizontalContainer}>
               <Text style={styles.blockTitle}>Read:</Text>
               <Block
-                bgColor={constants.Colors.orange}
+                bgColor={constants.Colors.green}
                 sliderValue={this.state.readOpacity}
                 onSliderValueChange={this.setReadOpacity}
                 selectedBgColor={this.state.readBgColor}
@@ -182,7 +182,7 @@ export class SettingScreen extends React.Component {
             </View>
             <View style={styles.horizontalContainer}>
               <Block
-                bgColor={constants.Colors.orange}
+                bgColor={constants.Colors.purple}
                 sliderValue={this.state.textOpacity}
                 onSliderValueChange={this.setTextOpacity}
                 selectedBgColor={this.state.textBgColor}
