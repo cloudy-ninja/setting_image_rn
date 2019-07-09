@@ -6,11 +6,14 @@ import {
 import style from './styles'
 import ColorViewer from './ColorViewer'
 import constants from '../../constants';
+import Slider from "react-native-slider";
 
 const Block =({
   onPress,
   title,
   bgColor,
+  sliderValue,
+  onSliderValueChange
 } = this.props) =>
   <View style={{...style.block, backgroundColor: bgColor}}>
     <View style={style.horizontalContainer}>
@@ -27,7 +30,12 @@ const Block =({
     </View>
     <View style={style.horizontalContainer}>
       <Text>Opacity</Text>
-      <Text>Opacity</Text>
+      <View style={style.blockSliderContainter}>
+        <Slider
+          value={sliderValue}
+          onValueChange={value => onSliderValueChange(value)}
+        />
+      </View>
     </View>
   </View>
 
