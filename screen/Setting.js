@@ -12,6 +12,7 @@ import {
 } from '../components/Home'
 import {
   Block,
+  LastBlock,
   styles,
 } from '../components/Setting'
 import constants from '../constants'
@@ -25,7 +26,7 @@ export class SettingScreen extends React.Component {
       deliveredOpacity: 0.2,
       readOpacity: 0.2,
       textOpacity: 0.2,
-      bgOpacity: 0.2
+      bgOpacity: 0.8
     }
   }
 
