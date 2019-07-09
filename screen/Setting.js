@@ -29,6 +29,12 @@ export class SettingScreen extends React.Component {
       bgOpacity: 0.8,
       sentBgColor: constants.Colors.green,
       sentTextColor: constants.Colors.blueIos,
+      deliveredBgColor: constants.Colors.green,
+      deliveredTextColor: constants.Colors.blueIos,
+      readBgColor: constants.Colors.green,
+      readTextColor: constants.Colors.blueIos,
+      textBgColor: constants.Colors.green,
+      textTextColor: constants.Colors.blueIos,
     }
   }
 
@@ -74,6 +80,46 @@ export class SettingScreen extends React.Component {
     })
   }
 
+  setDeliveredBgColor = (color) => {
+    this.setState({
+      deliveredBgColor: color
+    })
+  }
+
+  setDeliveredTextColor = (color) => {
+    this.setState({
+      deliveredTextColor: color
+    })
+  }
+
+  setReadBgColor = (color) => {
+    this.setState({
+      readBgColor: color
+    })
+  }
+
+  setReadTextColor = (color) => {
+    this.setState({
+      readTextColor: color
+    })
+  }
+
+  setTextBgColor = (color) => {
+    this.setState({
+      textBgColor: color
+    })
+  }
+
+  setTextTextColor = (color) => {
+    this.setState({
+      textTextColor: color
+    })
+  }
+
+  onGoBack = () => {
+    this.props.navigation.goBack()
+  }
+
   render() {
     const { navigation } = this.props;
     const imageUri = navigation.getParam('imageUri');
@@ -108,6 +154,14 @@ export class SettingScreen extends React.Component {
                 bgColor={constants.Colors.orange}
                 sliderValue={this.state.deliveredOpacity}
                 onSliderValueChange={this.setDeliveredOpacity}
+                selectedBgColor={this.state.deliveredBgColor}
+                selectedTextColor={this.state.deliveredTextColor}
+                onSelectBgColor={() => {this.props.navigation.push('SelectColor', {
+                  onSelectColor: this.setDeliveredBgColor,
+                })}}
+                onSelectTextColor={() => {this.props.navigation.push('SelectColor', {
+                  onSelectColor: this.setDeliveredTextColor,
+                })}}
               />
             </View>
             <View style={styles.horizontalContainer}>
@@ -116,6 +170,14 @@ export class SettingScreen extends React.Component {
                 bgColor={constants.Colors.orange}
                 sliderValue={this.state.readOpacity}
                 onSliderValueChange={this.setReadOpacity}
+                selectedBgColor={this.state.readBgColor}
+                selectedTextColor={this.state.readTextColor}
+                onSelectBgColor={() => {this.props.navigation.push('SelectColor', {
+                  onSelectColor: this.setReadBgColor,
+                })}}
+                onSelectTextColor={() => {this.props.navigation.push('SelectColor', {
+                  onSelectColor: this.setReadTextColor,
+                })}}
               />
             </View>
             <View style={styles.horizontalContainer}>
@@ -123,6 +185,14 @@ export class SettingScreen extends React.Component {
                 bgColor={constants.Colors.orange}
                 sliderValue={this.state.textOpacity}
                 onSliderValueChange={this.setTextOpacity}
+                selectedBgColor={this.state.textBgColor}
+                selectedTextColor={this.state.textTextColor}
+                onSelectBgColor={() => {this.props.navigation.push('SelectColor', {
+                  onSelectColor: this.setTextBgColor,
+                })}}
+                onSelectTextColor={() => {this.props.navigation.push('SelectColor', {
+                  onSelectColor: this.setTextTextColor,
+                })}}
               />
               <Text style={styles.blockTitle}>For me</Text>
             </View>
@@ -142,6 +212,7 @@ export class SettingScreen extends React.Component {
                 title={'Reset'}
                 bgColor={constants.Colors.white}
                 fontColor={constants.Colors.black}
+                onPress={this.onGoBack}
               />
             </View>
           </View>
